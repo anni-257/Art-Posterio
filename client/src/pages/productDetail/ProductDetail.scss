@@ -1,0 +1,99 @@
+.ProductDetail{
+    margin-top:20px;
+    .product-layout{
+        // background-color: red;
+        display: flex;
+        gap:20px;
+
+
+        .product-image{
+            .product-img{
+                // background-color: yellow;
+                max-width: 400px;
+                min-width: 350px;
+                height:500px;
+    
+                img{
+                    width:100%;
+                    transform: scale(0.9);
+                }
+            }
+        }
+
+        .product-info{
+            // background-color: green;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            .cart-options{
+                .quantity-selector{
+                    border:1px solid var(--secondary-text-color);
+                    width:fit-content;
+
+                    .btn{
+                        padding:8px 16px;
+                        background-color: #eee;
+                        color:var(--primary-text-color);
+                        display: inline-block;
+                        cursor: pointer;
+                        font-size: 1.2rem;
+                        user-select: none;
+
+                        &:hover{
+                            background-color: #ddd;
+                        }
+
+                        &:active{
+                            background-color: #eee;
+                        }
+                    }
+                    .quantity{
+                        text-align: center;
+                        width: 60px;
+                        display: inline-block;
+                        font-weight: 700;
+                    }
+                }
+
+                .add-to-cart{
+                    margin-top:30px;
+                }
+            }
+            
+
+            .return-policy{
+                border-top: 1px solid #ccc;
+                color:var(--secondary-text-color);
+                font-size: 0.8rem;
+                margin-top:20px;
+                padding-top:10px;
+
+                ul{
+                    list-style:circle;
+                    li{
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:680px){
+    .ProductDetail{
+        .product-layout{
+            flex-direction: column;
+            .product-image{
+                width:100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .product-info{
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}
